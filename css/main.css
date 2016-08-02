@@ -163,8 +163,10 @@ p {
 }
 
 .post>p>img.full {
-  max-width: 20rem;
-  height: auto
+  padding: 4rem 8rem;
+  height: auto;
+  width: calc(100% - 16rem);
+  border-radius: 5px;
 }
 .post>p>img {
   height: 14rem;
