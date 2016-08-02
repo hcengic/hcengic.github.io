@@ -2,17 +2,11 @@
 layout: default
 title: Pokemon Yo
 ---
-
-		<div class="blurb">
-			<h1>Welcome to the Pokemon Yo Blog</h1>
-			<p>Learn more about our trading platform and all of the trading tools you will need for trading pokemon in Pokemon Go</p>
-            
-            <h1>Blog Posts</h1>
 <ul class="posts">
 
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><span>{{ post.date | date_to_string }}</span></li>
   {% endfor %}
-    
+
 </ul>
-		</div> 
+		</div>

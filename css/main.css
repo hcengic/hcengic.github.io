@@ -1,17 +1,38 @@
+@font-face {
+  font-family: Brandon;
+  font-weight: 400;
+  src: url("../fonts/brandon-regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Brandon;
+  font-weight: 300;
+  src: url("../fonts/brandon-light.otf") format("opentype");
+}
+@font-face {
+  font-family: Brandon;
+  font-weight: 500;
+  src: url("../fonts/brandon-semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: Brandon;
+  font-weight: 600;
+  src: url("../fonts/brandon-bold.otf") format("opentype");
+}
+
+* {
+  font-family: Brandon, Helvetica, 'Sans-Serif';
+}
+
 body { margin: 60px auto; width: 70%; }
 
 a { text-decoration: none; color: #999; }
 a:hover { text-decoration: underline; }
-
-p, ul { font-size: 1.5em; line-height: 1.4em; color: #333; }
-
-h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-h1 { font-size: 3em;  }
+h1 { font-size: 3em; font-weight: 500  }
 h2 { font-size: 2.7em; }
 h3 { font-size: 2.3em; }
-h4 { font-size: 1.9em; }
+h4 { font-size: 1.9em; font-weight: 500 ; }
 
-nav ul, footer ul { font-size: 1em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
+nav ul, footer ul { font-size: 1em; padding: 0px; list-style: none; font-weight: bold; }
 nav ul li, footer ul li { display: inline; margin-right: 20px; }
 
 footer { border-top: 1px solid #d5d5d5; font-size: .8em; }
@@ -24,6 +45,125 @@ ul.posts li { list-style: none; }
 .cv { margin: 0px 0px 60px; }
 .cv h1 { font-size: 3em; }
 .cv h2 { font-size: 2em; }
-.cv address, .cv .download { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
 .cv address, .cv p { font-size: 1.2em; }
 .cv .download { float: right; font-size: .8em; text-transform: uppercase; }
+
+a:hover {
+  text-decoration: none;
+}
+
+.btn {
+  background: rgba(33, 150, 243, 1);
+  color: white;
+  padding: .75rem 2rem;
+  top: 0px;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+  font-weight: 500;
+  border-bottom: 4px solid #1773bc;
+}
+
+.btn:hover {
+  background: rgba(33, 150, 243, 0.8);
+}
+
+.btn:active {
+  top: 4px;
+  border-bottom: 0px;
+}
+
+.action {
+  float: right;
+}
+
+
+.posts {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 0;
+
+}
+.posts>li {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  opacity: 0.75;
+}
+.posts>li>a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.posts>li:hover {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .posts {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+
+  }
+  .posts>li>a, .posts>li>span {
+    padding: 0;
+    display: block;
+    margin: 0;
+  }
+  .posts>li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding-bottom: 1rem;
+    display: block;
+  }
+}
+
+.blurb {
+  padding-top: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+footer>img {
+  align-content: center;
+  align-self: center;
+  height: 1.5rem;
+}
+
+center {
+  display: block;
+  margin: auto;
+}
+
+p {
+  line-height: 3rem;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.link {
+  font-size: 1.25rem;
+  background: #f4f4f4;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+}
+
+.post>p>img {
+  height: 14rem;
+  display: block;
+  margin: auto;
+}
