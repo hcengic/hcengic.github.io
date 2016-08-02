@@ -162,6 +162,10 @@ p {
   margin: 2rem 0;
 }
 
+.post>p>img.full {
+  max-width: 20rem;
+  height: auto
+}
 .post>p>img {
   height: 14rem;
   display: block;
